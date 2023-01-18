@@ -1,0 +1,10 @@
+[placeholders.bench]
+type = "string"
+prompt = "What should your benchmark file be named?"
+default = "bench"
+regex = "\\w+"
+
+[placeholders.async]
+type = "bool"
+prompt = "Do you want async support?"
+default = false

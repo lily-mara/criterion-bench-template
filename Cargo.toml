@@ -1,0 +1,15 @@
+[package]
+name = "{{ crate_name }}"
+authors = ["{{ authors}}"]
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = { version = "0.4", features = [{% if async %}"async_tokio"{% endif %}] }
+{% if async %}tokio = { version = "1", features = ["full"] }{% endif %}
+
+[[bench]]
+name = "{{ bench }}"
+harness = false
